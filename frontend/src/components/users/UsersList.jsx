@@ -16,6 +16,10 @@ const UsersList = () => {
     );
   }
 
+  if (!users?.data?.users.length) {
+    return <p className="text-2xl my-2">No users found</p>;
+  }
+
   return (
     <div className="py-5 grid lg:grid-cols-4  md:grid-cols-3 gap-3">
       {users.data.users.map((user) => (
